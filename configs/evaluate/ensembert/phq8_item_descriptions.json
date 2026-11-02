@@ -1,0 +1,10 @@
+{
+  "anhedonia": "Loss of interest, reduced enjoyment, lack of motivation, or diminished pleasure in normally rewarding activities.",
+  "depressed_mood": "Sadness, hopelessness, low mood, tearfulness, despair, or feeling emotionally down.",
+  "sleep": "Insomnia, difficulty falling asleep, staying asleep, early waking, oversleeping, or disrupted sleep.",
+  "fatigue": "Tiredness, low energy, exhaustion, sluggishness, or feeling physically drained.",
+  "appetite": "Poor appetite, overeating, eating less than usual, eating more than usual, or appetite change.",
+  "self_worth": "Guilt, shame, worthlessness, self-blame, feeling like a failure, or feeling burdensome.",
+  "concentration": "Difficulty focusing, trouble reading, poor attention, indecision, or problems concentrating.",
+  "psychomotor": "Moving or speaking slowly, being restless, fidgety, agitated, or unable to sit still."
+}

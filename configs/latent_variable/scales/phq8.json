@@ -1,0 +1,107 @@
+{
+  "instrument": {
+    "name": "Personal Health Questionnaire Depression Scale (PHQ-8)",
+    "short_name": "PHQ-8",
+    "source": {
+      "file": "PHQ-8.pdf",
+      "extracted_on": "2026-02-28"
+    },
+    "timeframe_prompt": "Over the last 2 weeks, how often have you been bothered by any of the following problems?"
+  },
+  "response_options": [
+    {
+      "label": "Not at all",
+      "score": 0
+    },
+    {
+      "label": "Several days",
+      "score": 1
+    },
+    {
+      "label": "More than half the days",
+      "score": 2
+    },
+    {
+      "label": "Nearly every day",
+      "score": 3
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "text": "Little interest or pleasure in doing things"
+    },
+    {
+      "id": 2,
+      "text": "Feeling down, depressed, or hopeless"
+    },
+    {
+      "id": 3,
+      "text": "Trouble falling or staying asleep, or sleeping too much"
+    },
+    {
+      "id": 4,
+      "text": "Feeling tired or having little energy"
+    },
+    {
+      "id": 5,
+      "text": "Poor appetite or overeating"
+    },
+    {
+      "id": 6,
+      "text": "Feeling bad about yourself, or that you are a failure, or have let yourself or your family down"
+    },
+    {
+      "id": 7,
+      "text": "Trouble concentrating on things, such as reading the newspaper or watching television"
+    },
+    {
+      "id": 8,
+      "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual"
+    }
+  ],
+  "score": {
+    "method": "Sum item scores for questions 1-8",
+    "range": {
+      "min": 0,
+      "max": 24
+    },
+    "scoring_rules": [
+      "If two consecutive numbers are circled, score the higher number.",
+      "If circled numbers are not consecutive, do not score the item.",
+      "If more than 1 item is missing, set the scale value to missing."
+    ]
+  },
+  "interpretation": {
+    "thresholds": [
+      {
+        "type": "major_depression_cutoff",
+        "score_greater_or_equal": 10,
+        "label": "considered major depression"
+      },
+      {
+        "type": "severe_major_depression_cutoff",
+        "score_greater_or_equal": 20,
+        "label": "considered severe major depression"
+      }
+    ]
+  },
+  "psychometrics": {
+    "sample_size": 1165,
+    "population_note": "Tested on subjects with chronic conditions.",
+    "observed_range": "0-24",
+    "mean": 6.63,
+    "standard_deviation": 5.52,
+    "internal_consistency_reliability": 0.86,
+    "test_retest_reliability": "NA"
+  },
+  "notes": [
+    "PHQ-8 is an adaptation of PHQ-9 with item 9 removed.",
+    "Scale states it is free to use without permission.",
+    "Scale available in Spanish."
+  ],
+  "references": [
+    "Kroenke K, Strine TW, Spritzer RL, Williams JB, Berry JT, Mokdad AH. The PHQ-8 as a measure of current depression in the general population. J Affect Disord. 2009;114(1-3):163-73.",
+    "Razykov I, Ziegelstein RC, Whooley MA, Thombs BD. The PHQ-9 versus the PHQ-8--is item 9 useful for assessing suicide risk in coronary artery disease patients? Data from the Heart and Soul Study. J Psychosom Res. 2012;73(3):163-168."
+  ]
+}

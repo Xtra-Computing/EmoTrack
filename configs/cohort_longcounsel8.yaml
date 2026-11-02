@@ -1,0 +1,28 @@
+trends:
+  - configs/conversation_trends/psyche
+queue_mode: profile-first
+generation_backend: local
+llm_gpus:
+  - cuda:0
+encode_gpu: ""
+rerank_gpu: ""
+config_template: configs/longitudinal_local.yaml
+profiles_root: profiles
+source_profiles: []
+data_root: data/conversation_profiles
+output_root: out/longcounsel-8
+result_root: result/longcounsel-8
+cache_root: cache/longcounsel-8
+num_sessions: 5
+target_turns: 20
+api_batch_size: 0
+api_batch_sleep_seconds: 0.0
+limit: null
+reverse: false
+worker_batch_size: 1
+force_convert: false
+fresh: false
+continue_on_error: true
+sample_trend_per_profile: true
+sample_seed: 42
+sample_rounds: 10

@@ -1,0 +1,56 @@
+[project]
+name = "emotrack"
+version = "0.1.0"
+description = "Research system for longitudinal mental-state tracking in online therapy conversations."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "tqdm>=4.67.0",
+    "huggingface-hub>=0.34.0",
+    "zstandard>=0.23.0",
+    "numpy>=2.0.0",
+    "scipy>=1.13.0",
+    "torch>=2.4.0",
+    "aiolimiter>=1.1.0",
+    "google-auth[requests]>=2.41.1",
+    "httpx>=0.27.0",
+    "jinja2>=3.1.0",
+    "openai>=1.0.0",
+    "pydantic>=2.7.0",
+    "python-dotenv>=1.0.0",
+    "PyYAML>=6.0.0",
+    "tenacity>=8.2.0",
+    "transformers>=5.3.0",
+    "vllm>=0.19.0",
+    "bitsandbytes>=0.43.0",
+    "peft>=0.14.0",
+    "ray[default]>=2.41.0",
+    "datasets>=3.0.0",
+    "pandas>=2.0.0",
+    "pyarrow>=14.0.0",
+    "scikit-learn>=1.5.0",
+]
+
+[project.scripts]
+emotrack-reproduce = "EmoTrack.pipeline.reproduce:main"
+emotrack-evaluate = "EmoTrack.pipeline.evaluate:main"
+emotrack-train-emotrack = "EmoTrack.pipeline.train_emotrack:main"
+emotrack-psyche-dataset = "EmoTrack.pipeline.psyche_dataset:main"
+emotrack-prepare-daic-woz = "EmoTrack.pipeline.prepare_daic_woz_result:main"
+
+[build-system]
+requires = ["setuptools>=67.6.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+prerelease = "allow"
+override-dependencies = ["transformers>=5.3.0", "numpy>=2.0.0"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["EmoTrack*"]

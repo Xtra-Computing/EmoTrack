@@ -1,0 +1,61 @@
+# Local environment
+.env
+.venv/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Workspace-only files
+.DS_Store
+AGENTS.md
+CLAUDE.md
+.codex
+.github/
+
+# Local data, outputs, and generated assets
+/data/
+/models/
+/cache/
+/fig/
+/longcounsel-8/
+/out/
+/outputs/
+/runs/
+/figure/
+/docs/
+/logs/
+/slides/
+
+# Generated tables and experiment results
+/table/
+/result/
+
+# Common generated files
+*.log
+*.csv
+*.old
+
+# External / restricted datasets and local research artifacts
+*_private.*
+/scripts/download_daic_woz.py
+paper/
+DAIC/
+PsychEval/PsychEval_paper/
+PsychEval/latent_generation/integrative1_*.json
+
+# Local experiment artifacts
+/configs/evaluate/generated_*transfer_lc8_to_daic_seed*.yaml
+/configs/conversation_trends/psyche/
+/configs/train/explore/
+
+# Local baseline timing provenance and generated timing artifacts
+/.timing_work/
+/timing_file_list.txt
+/timing_manifest.txt
+/timing_missing_pack.tar.gz
+/timing_status.md
+/result/baseline/baseline_timing_seed0_4.*
+/table/baseline_timing_seed0_4.tex

@@ -1,0 +1,9 @@
+# External inputs for emotrack-reproduce. The checkpoint comes from train/emotrack_daic.yaml.
+dataset:
+  name: edaic
+  input_root: result/edaic
+  split_file: result/edaic/train_val_test_split.json
+  transcript_view: full
+method:
+  aida_cache_path: out/eval/edaic/edaic_features/aida/seed0/feature_cache/aida_features.json
+  embed_cache_dir: out/embed_cache/edaic

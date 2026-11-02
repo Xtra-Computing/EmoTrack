@@ -1,0 +1,3 @@
+[submodule "repos/PsychEval"]
+	path = repos/PsychEval
+	url = https://github.com/ECNU-ICALK/PsychEval.git

@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "version": "1.0",
+    "scope": "PHQ-8 behavior cue bank (composition-pruned final bank, 10 cues per cell, total MAE 0.9370)"
+  },
+  "instrument_definitions": {
+    "phq8": {
+      "name": "Patient Health Questionnaire-8",
+      "item_score_range": [
+        0,
+        3
+      ],
+      "items": [
+        "anhedonia",
+        "depressed_mood",
+        "sleep",
+        "fatigue",
+        "appetite",
+        "self_worth",
+        "concentration",
+        "psychomotor"
+      ]
+    }
+  },
+  "severity_bands": {
+    "phq8": [
+      {
+        "band": "minimal",
+        "min": 0,
+        "max": 4
+      },
+      {
+        "band": "mild",
+        "min": 5,
+        "max": 9
+      },
+      {
+        "band": "moderate",
+        "min": 10,
+        "max": 14
+      },
+      {
+        "band": "moderately_severe",
+        "min": 15,
+        "max": 19
+      },
+      {
+        "band": "severe",
+        "min": 20,
+        "max": 24
+      }
+    ]
+  },
+  "mapping": {
+    "phq8": {
+      "anhedonia": {
+        "severity_levels": {
+          "0": [
+            "There is no recurring pattern of abandoning enjoyable plans because nothing sounds appealing.",
+            "Pleasant parts of the day still register as pleasant instead of feeling flat or effortful.",
+            "Pleasure has remained available in ordinary ways, not rare or hard to access.",
+            "Favorite shows, games, or outings still offer a normal sense of anticipation lately.",
+            "There has been no recent stretch of losing interest in the things that normally make the day lighter.",
+            "Free time is easy enough to fill because familiar interests still pull attention in a natural way.",
+            "Hobbies still spark interest and things they enjoy feel satisfying as they usually do.",
+            "Regular sources of enjoyment still feel reachable instead of emotionally distant.",
+            "Interest in personal routines, entertainment, or company has stayed broadly stable lately.",
+            "Starting something fun does not require unusual pushing because interest is still mostly intact."
+          ],
+          "1": [
+            "The person sometimes skips something enjoyable because starting it feels like extra effort, then regrets missing it.",
+            "Some usual activities have felt a little less appealing lately, though interest often comes back once started.",
+            "Plans that are normally pleasant sometimes feel harder to get excited about, then improve once underway.",
+            "Enjoyment has been slightly harder to access on some days without staying gone.",
+            "Activities that usually recharge the person have felt mildly dulled on and off lately.",
+            "There have been scattered moments of doing enjoyable things more out of routine than real eagerness.",
+            "Favorite pastimes feel slightly muted lately, offering enjoyment but only when one actively pushes to engage.",
+            "Some favorite activities feel a little less vibrant lately, yet they still spark occasional moments of enjoyment.",
+            "Interest occasionally runs low enough that free time feels less inviting than usual, but not persistently.",
+            "A handful of recent days included going through enjoyable routines without much spark at first."
+          ],
+          "2": [
+            "Across the week, enjoyment is thinned enough that free time goes flat and rewarding activities stop shaping the day.",
+            "There are still occasional brighter moments, but low interest now shapes a large share of the week.",
+            "Participation in once-important interests has dropped across most days because they rarely feel rewarding anymore.",
+            "Free time is repeatedly swallowed by scrolling, staring, or doing nothing; familiar activities no longer get started.",
+            "Trying to unwind no longer works much because enjoyable activities feel flat through most of the week.",
+            "Pleasant moments are quickly swallowed by long flat stretches, so enjoyment fails to hold long enough to change the day.",
+            "Most leisure time ends up feeling empty because familiar interests no longer offer real engagement.",
+            "Engaging with previously enjoyed routines now feels like starting work that yields minimal reward despite significant effort invested.",
+            "Free time is more often spent scrolling or staring because familiar activities no longer draw much interest.",
+            "Social invitations, hobbies, and small treats all seem stripped of the reward they used to carry."
+          ],
+          "3": [
+            "The capacity to enjoy anything is entirely broken; existing is just going through the motions.",
+            "All favorite activities are permanently dropped; nothing breaks through the absolute apathy.",
+            "Pleasure has become hard to access in nearly every part of the week, not just after stress.",
+            "Pleasure has faded so severely that even good news or warm moments do not stir anything recognizable.",
+            "Every single hobby is abandoned completely; the days are just a void of flat emptiness.",
+            "Every attempt to reignite an old spark fails instantly; the numbness is relentless.",
+            "The loss of enjoyment shows up across the whole week: activities are abandoned, evenings go blank, and nothing looks worth anticipating.",
+            "Nothing gets started for pleasure anymore; free time passes in staring, scrolling, or waiting for the day to end.",
+            "The world feels permanently muted, where previously enjoyable things trigger no emotional resonance whatsoever.",
+            "Passions that defined their personality are now completely dead and untouched."
+          ]
+        }
+      },
+      "depressed_mood": {
+        "severity_levels": {
+          "0": [
+            "Ordinary pleasures and annoyances still register without everything being filtered through gloom.",
+            "There is no recent pattern of feeling emotionally flattened across large parts of the week.",
+            "Mood has felt fairly even lately, with ordinary ups and downs that pass without much residue.",
+            "There has not been a recurring sense of heaviness hanging over otherwise ordinary days.",
+            "Mood shifts still respond to good news, rest, or a change of scenery in a normal way.",
+            "Overall emotional tone remains intact, without a notable recent slide into discouragement.",
+            "There has not been a recurring urge to describe life as pointless or bleak.",
+            "Lately there has not been a constant undertow of sadness or hopelessness.",
+            "Mood generally feels steady and emotions come through clearly without unusual heaviness.",
+            "The general tone of conversations remains recognizable rather than noticeably downcast."
+          ],
+          "1": [
+            "Mood has been a little more fragile lately, with low patches that still pass.",
+            "Sadness feels present enough to mention, though it does not define the whole week.",
+            "The person has sounded a bit more downcast on certain days, though not consistently.",
+            "Discouragement has shown up intermittently enough to notice, without taking over most days.",
+            "There are scattered moments of feeling low for no obvious reason, then settling back toward normal.",
+            "A few mornings have started under a gray cloud before the mood gradually loosened later on.",
+            "Some recent days have carried a heavier emotional tone, though it still lifts with time or distraction.",
+            "The recent pattern suggests real but limited sadness that remains mostly recoverable.",
+            "Tears or a lump in the throat have shown up occasionally without becoming a frequent pattern.",
+            "A mild lowered tone has become noticeable, but not constant or hard to shake."
+          ],
+          "2": [
+            "The low mood is present often enough that it has started shaping how the whole week feels.",
+            "There are still occasional lighter pockets, but the week is more often shaded by sadness or heaviness.",
+            "There are still pockets of relief, but a downcast tone now shows up on a large share of days.",
+            "The emotional tone lately has been low enough to affect patience, perspective, and engagement.",
+            "Many recent days have carried a discouraging emotional weight that makes ordinary problems feel much darker.",
+            "Feelings of sadness or discouragement come up on many days and feel hard to shake.",
+            "Talking about everyday life often carries a resigned edge, as though things feel persistently hard.",
+            "Low mood has become a clear burden in daily life, though it is not entirely inescapable.",
+            "The recent pattern is more than a bad patch here and there; sadness keeps coming back.",
+            "Voice often carries a discouraged, low tone that reflects a mood slump present on many days."
+          ],
+          "3": [
+            "A persistent sense of hopelessness dominates most of the day, with little ability to find comfort even in familiar surroundings.",
+            "Sadness sits in the voice from morning to night every day, and even simple errands get carried out under obvious heaviness.",
+            "The room changes when the person enters, with relentless sadness showing in posture, face, and flat replies every day.",
+            "The week is smothered by sadness or deadness; there is no breathing room from one day to the next.",
+            "Tears or near-tears keep breaking through daily, and comfort from others fails to shift the mood for more than moments.",
+            "Every thought is coated in a thick, suffocating layer of utter hopelessness.",
+            "Sadness now sits in the foreground nearly all the time rather than coming in waves.",
+            "Every day includes stretches of crying, staring, or shutting down, and the sadness returns immediately after any interruption.",
+            "The person sounds bleak in nearly every exchange, and minor setbacks trigger hours of visible gloom without recovery.",
+            "A bleak, crushing low mood is present through the whole day, with no genuine lift anywhere in it."
+          ]
+        }
+      },
+      "sleep": {
+        "severity_levels": {
+          "0": [
+            "Sleep duration has stayed within a workable range and has not crowded out daily plans.",
+            "Sleep quality feels ordinary overall, with no repeated strain around falling asleep or staying asleep.",
+            "Evening tiredness lines up with going to bed, and rest usually follows without much disruption.",
+            "Lately there have not been whole mornings disappearing into extra sleep.",
+            "The amount of sleep lately has felt normal enough that it barely stands out.",
+            "Nighttime wakeups are uncommon enough that they do not stand out or affect the day.",
+            "Sleep feels restorative without becoming a reason plans start late or get skipped.",
+            "Sleep feels reasonably steady lately, and daytime energy is not shaped by rough nights.",
+            "Night rest has stayed dependable enough that the day does not need extra adjustment.",
+            "Lately there has not been a persistent problem with getting enough settled sleep."
+          ],
+          "1": [
+            "There are noticeable but scattered nights when sleep feels harder to catch and less refreshing.",
+            "There have been scattered nights of lying awake longer than usual before finally drifting off.",
+            "A few recent nights left sleep feeling thinner, but daytime functioning still mostly holds together.",
+            "A few recent days included more sleeping than usual without major disruption to the week.",
+            "A few nights have taken longer to settle, but the pattern still feels manageable by the next day.",
+            "Sleep sometimes breaks earlier than wanted, though it is still possible to function without major changes.",
+            "On certain nights, the mind stays active longer than expected, though sleep eventually comes.",
+            "Some days have started with sleeping later than planned, though the rest of the week still runs normally.",
+            "Sometimes the mind stays busy enough that falling asleep takes a few extra minutes.",
+            "A mild tendency to oversleep shows up here and there, but not strongly enough to dominate routines."
+          ],
+          "2": [
+            "Late afternoon crashes force long naps that bleed into evening routines, disrupting daily rhythms on most weekdays.",
+            "Long mornings in bed have become a recurring issue rather than an occasional indulgence.",
+            "Mornings drag with heavy limbs and a stubborn pull back to bed, making late starts happen more often than not.",
+            "There are still some normal days, but too many recent ones disappear into extra sleep.",
+            "Sleeping well past the intended wake time happens on many days rather than only once in a while.",
+            "There are still some more typical days, but oversleeping has become a real pattern.",
+            "Oversleeping now happens often enough that plans and routines need regular adjustment.",
+            "The person sleeps far past the alarm on repeated days, then rushes the afternoon after losing half the morning.",
+            "Stress readily carries into the night, and sleep does not reliably recover by the next evening.",
+            "The week often gets shaped around poor nights, though an occasional decent night still breaks through."
+          ],
+          "3": [
+            "Sleep is virtually non-existent; every night is an endless, agonizing vigil in the dark.",
+            "Every single night is a waking nightmare of racing thoughts and absolute wakefulness.",
+            "Prescription sleep aids do absolutely nothing; the insomnia is completely impenetrable.",
+            "The person lies awake until near dawn almost daily, then stumbles through work, meals, and conversations in a constant short-slept fog.",
+            "Even weekends and exhausted nights bring no reset; sleep keeps failing almost every day, and the whole schedule has collapsed around it.",
+            "Night after night, bedtime turns into hours awake or repeated waking, and rest does not arrive.",
+            "Sleep keeps swallowing whole mornings almost every day, with alarms missed, messages unanswered, and daylight already half gone.",
+            "Returning to sleep has become nearly impossible, so 3 a.m. wakeups regularly open into the whole rest of the night.",
+            "Nighttime is just eight hours of miserable, wide-awake torment without a minute of relief.",
+            "Every night breaks into fragments, and the day gets rebuilt around surviving on almost no real rest."
+          ]
+        }
+      },
+      "fatigue": {
+        "severity_levels": {
+          "0": [
+            "Evening fatigue stays within a normal range instead of arriving far too early.",
+            "Keeps a normal pace through errands or conversations without looking persistently worn out.",
+            "Energy levels stay steady through the week without needing extra rest to recover from normal demands.",
+            "Energy is basically adequate for the day, without a recurring sense of running on empty.",
+            "There is enough stamina for basic tasks, conversation, and normal routines without unusual strain.",
+            "The body feels reasonably available for the day rather than repeatedly spent before much happens.",
+            "The body does not carry a standing drained feeling from morning through evening.",
+            "After a busy day, rest brings energy back in an ordinary way by the next day.",
+            "Sleep or downtime generally resets energy instead of leaving the same tiredness in place.",
+            "Others would not likely notice chronic tiredness in how the day is carried."
+          ],
+          "1": [
+            "There are a few days where conserving energy starts influencing choices more than usual.",
+            "Getting started occasionally takes more push because stamina feels lower than expected.",
+            "Energy dips show up intermittently, making pace feel heavier for a while before it improves.",
+            "There is a low hum of tiredness that does not interfere with daily demands but is noticeable upon reflection.",
+            "Others might notice mild tiredness in posture or tone on a few days.",
+            "Some days come with a low-battery feeling that is noticeable but not hard to work around.",
+            "The tiredness is real but still mild enough that plenty of ordinary functioning remains.",
+            "There is a subtle sense of physical depletion after routine tasks, though it does not linger into the evening.",
+            "The sense of depletion comes and goes instead of defining the whole week.",
+            "A demanding day can leave lingering tiredness into the next one, but it usually passes."
+          ],
+          "2": [
+            "Low energy now overruns large parts of the week and cuts down what gets attempted.",
+            "The tiredness keeps constricting the week, trimming plans, slowing pace, and reducing follow-through.",
+            "Simple tasks now ask for far more energy than they should, turning basic to-do lists into something hard to face.",
+            "By midday, stamina drops hard enough that calls, outings, or home tasks get postponed until they expire.",
+            "There is rarely enough energy to complete tasks, and the mind often feels too slow to keep up with plans.",
+            "Ordinary chores and work now take sustained effort because the body feels drained so often.",
+            "Errands and conversations both take more out of the person than they used to on many days.",
+            "Rest gives only short-lived relief; the tiredness crashes back and retakes the day.",
+            "Heavy exhaustion presses against everyday tasks for multiple days each week, making simple movements feel like climbing through thick mud.",
+            "After small efforts like household chores, the body feels drained for hours, requiring longer rest than normal to regain strength."
+          ],
+          "3": [
+            "The whole day has to be organized around severe depletion; usable energy does not arrive.",
+            "Low energy stays severe across settings and shows up in pace, posture, speech, and canceled plans.",
+            "The fatigue is an inescapable, crushing physical weight that pins the body down permanently.",
+            "The body looks spent from morning onward, and nearly every activity gets broken by sitting, lying down, or giving up.",
+            "The exhaustion is pervasive enough that it governs every choice, plan, and movement across the day.",
+            "The sheer weight of the exhaustion completely crushes any attempt to function.",
+            "Speech, movement, and presence all look persistently worn down; exhaustion stays severe across the day.",
+            "The exhaustion feels pervasive enough that it shapes nearly every choice across the day.",
+            "The energy tank is permanently smashed at zero; there is no reserve whatsoever.",
+            "The exhaustion is profoundly painful, aching deep in the bones all day long."
+          ]
+        }
+      },
+      "appetite": {
+        "severity_levels": {
+          "0": [
+            "Food around other people does not turn into repeated overdoing or loss of control.",
+            "There is no recurring pattern of skipping meals because nothing sounds good.",
+            "Usual foods still have enough taste and interest to finish them.",
+            "There is no notable run of leaving plates mostly untouched.",
+            "Food does not feel consistently off-putting or hard to face at meals.",
+            "There has not been a recent pattern of eating large amounts out of nowhere or out of proportion.",
+            "Snacking and portions stay within a usual range instead of repeatedly running larger than intended.",
+            "Can sit down to a meal and get through a normal portion without it feeling difficult.",
+            "Talk about meals sounds ordinary, not like food has become consistently unappealing.",
+            "Eating is generally guided by appetite rather than forgetting or forcing it."
+          ],
+          "1": [
+            "Meal timing slips on some days because hunger cues feel weaker than usual.",
+            "Late-night or stress-related eating shows up intermittently lately, rather than becoming a pattern on most days.",
+            "Stress occasionally shuts appetite down for a while before it comes back.",
+            "A few meals have been skipped or delayed because eating just did not feel worth it at the time.",
+            "There are a few times lately where eating keeps going past hunger more than intended.",
+            "Snacking can run heavier on some evenings without becoming an everyday pattern.",
+            "Being around food can occasionally lead to overdoing it a bit, though not in a repeated way.",
+            "Some meals sound less appealing on and off, though hunger usually returns later.",
+            "Portions are sometimes left unfinished when there just is not much pull to keep eating.",
+            "Food can seem bland or uninviting on certain days without staying that way all week."
+          ],
+          "2": [
+            "There is frequent comfort eating or continual grazing broad enough to alter daily routines.",
+            "Extra portions, repeated snacking, or drawn-out eating have become frequent enough that the increase is hard to ignore.",
+            "Even planned meals repeatedly turn into much more eating than intended, across settings.",
+            "Meals or snacks repeatedly expand beyond plan, taking over enough of the day to disrupt routines.",
+            "Food is taking up more room in the day because eating runs longer or larger than intended.",
+            "Stress often leads to extra eating, and the increase can continue beyond the stressful moment on many days.",
+            "Stress regularly pushes eating upward, and the amount often stays high after the stress passes.",
+            "Food keeps getting postponed or forgotten, and whole parts of the day pass without a proper meal.",
+            "Many days include eating past fullness, as if stopping takes more effort than it should.",
+            "Eating past the point of feeling painfully stuffed happens multiple times a week."
+          ],
+          "3": [
+            "Low appetite runs every day, across settings, and without any real break.",
+            "Eating runs past fullness every day with no internal stop signal, so the body keeps taking in more despite discomfort.",
+            "The person keeps eating far past fullness almost every day, then sits in discomfort while chores, calls, and bedtime fall apart.",
+            "Eating has become a daily battle, with entire meals skipped and plates returning nearly full almost every day.",
+            "Painful, agonizing bloating is the permanent state from ceaseless, desperate overeating.",
+            "Complete starvation is the daily reality; forcing down even water feels impossible.",
+            "The entirety of the day is spent obsessively consuming massive quantities of junk food.",
+            "Waking up in the middle of the night just to binge eat sugar happens every single night.",
+            "Eating episodes have become a near-daily takeover, with large amounts gone quickly and the rest of the evening derailed afterward.",
+            "Eating is completely out of control; food is stuffed into the mouth constantly, without pausing."
+          ]
+        }
+      },
+      "self_worth": {
+        "severity_levels": {
+          "0": [
+            "Recent setbacks were handled as part of life without much self-blame or feelings of letting people down.",
+            "There is no persistent theme of calling oneself a failure in softer or indirect ways.",
+            "Does not repeatedly minimize contributions or act as though taking up space is a problem.",
+            "There is no recurring sense of being a burden to the people who matter.",
+            "The mind does not keep returning to the idea of being fundamentally disappointing.",
+            "Talk about responsibilities does not carry a recurring theme of having let everyone down.",
+            "The baseline view of the self has been ordinary rather than steeped in shame.",
+            "Inner commentary stays relatively fair rather than harshly labeling the self as not good enough.",
+            "An imperfect day does not turn into a broader conclusion of having failed at life.",
+            "Self-evaluation stays balanced enough that flaws are not turned into a global verdict."
+          ],
+          "1": [
+            "Feeling inadequate shows up on some days, while many others feel more balanced.",
+            "There are occasional pangs of guilt about not doing enough for others, without a constant burden.",
+            "Small slipups can trigger mild shame even though everyday functioning keeps moving forward.",
+            "There are scattered moments of feeling like more of a letdown than the situation really warrants.",
+            "Self-criticism appears intermittently, but it does not fully define how the person sees themselves.",
+            "The theme is mild and intermittent: not good enough at times, but not as a fixed identity.",
+            "A mistake can briefly spark thoughts of not measuring up, though those thoughts usually fade.",
+            "After a strained interaction, there may be a short worry about having disappointed someone.",
+            "There can be occasional comments that undersell one's own contribution or competence.",
+            "Talk about responsibilities can occasionally sound self-blaming without staying locked in that tone."
+          ],
+          "2": [
+            "Reassurance does not stick; the person keeps returning to the idea that someone else would do better in their place.",
+            "Talk about responsibilities often carries self-blame or the assumption of having failed somebody.",
+            "After routine meetings, the client spends considerable time revisiting exchanges, convinced performance fell short of team expectations.",
+            "The week carries a repeated sense of being a letdown, and it keeps surfacing in speech, posture, or withdrawal.",
+            "There is a repeated tendency to describe the self as letting people down, whether directly or in quieter, persistent ways.",
+            "The sense of falling short surfaces often enough that routine tasks feel like proof of inadequacy rather than routine maintenance.",
+            "Reassurance helps only partly because the self-condemning view keeps coming back again.",
+            "Compliments get rejected across the week, and the person repeatedly insists anyone relying on them made the wrong choice.",
+            "Close relationships may feel strained from the inside because guilt keeps coloring the connection.",
+            "The feeling of having failed others hangs over the day in a way that is hard to set aside."
+          ],
+          "3": [
+            "Self-loathing is so intense and violent it feels like being internally ripped apart constantly.",
+            "Total self-condemnation is the default state; they are the villain in every single scenario.",
+            "Self-condemning talk shows up every day, and others keep trying to interrupt it without success.",
+            "Almost every day there was a strong sense of failure and letting others down, with little room for self-compassion.",
+            "The absolute certainty of being a completely worthless, toxic poison dictates every waking second.",
+            "The inner voice is brutally condemning all the time, turning every flaw or shortcoming into proof of being fundamentally a failure.",
+            "There is almost no break from the belief of being inadequate, and daily interactions keep getting shaped by shame and apology.",
+            "The feeling of being a catastrophic disappointment stands as a permanent, agonizing physical weight.",
+            "The person keeps describing their place in other people's lives as damage, disappointment, or extra weight almost every day.",
+            "They are entirely convinced they are a fundamentally evil, broken monster ruining everyone's lives."
+          ]
+        }
+      },
+      "concentration": {
+        "severity_levels": {
+          "0": [
+            "The mind stays steady during tasks without wandering or losing track of what was just read.",
+            "Can move through routine mental work without many avoidable mistakes from inattention.",
+            "The mind does not feel chronically foggy or slippery when trying to concentrate.",
+            "Simple planning, reading, and follow-through remain within an ordinary, workable mental range.",
+            "Mental fog is absent; details remain clear and accessible when switching between topics or tasks.",
+            "The mind feels clear enough to stay with reading, conversations, or routine planning.",
+            "Reading a page, email, or set of instructions does not usually require going over it again and again.",
+            "Thoughts keep pace with spoken words and written instructions without lagging or needing repetition.",
+            "Can follow multistep tasks without repeatedly losing the thread or forgetting what comes next.",
+            "Thoughts feel reasonably organized rather than scattered or hard to hold onto."
+          ],
+          "1": [
+            "The mind occasionally feels a little foggier than usual, though not most of the time.",
+            "There are a few moments lately of losing place in a task, then picking it back up.",
+            "The concentration problem is real but mild enough that it still feels intermittent.",
+            "Attention feels mildly less steady on some days, while plenty of moments are still normal.",
+            "Conversation can briefly slip away, with an occasional need to ask what was just said.",
+            "Can seem slightly spacey on some days while still remaining generally functional.",
+            "Mental clarity dips intermittently rather than staying clouded or slippery all day.",
+            "The mind is distractible at times, though still capable of decent focus much of the week.",
+            "Thoughts sometimes feel slightly fuzzy when shifting between tasks, causing brief pauses before returning to the flow.",
+            "Starting one task and drifting to another happens a bit more than usual on low-focus days."
+          ],
+          "2": [
+            "Planning tasks repeatedly loses momentum midway through, requiring fresh starts more than half the week despite best efforts.",
+            "Work and home tasks now take multiples of their usual time, since attention keeps failing before the next step lands.",
+            "Reading materials demand constant restarting as mental images dissolve before completion, creating a cycle of partial understanding on average across many days.",
+            "The concentration difficulty is strong enough that other people may notice indecision or repetition.",
+            "Others notice the blank pauses, repeated questions, and lost thread, since that pattern now breaks through publicly.",
+            "Attention fails across the week to the point that ordinary demands need extra time, extra checking, or are left unfinished.",
+            "Work sequences break down repeatedly as attention slips between steps, requiring manual recollection of where progress stopped on most weekdays.",
+            "Work tasks lose coherence partway through, requiring restarts most mornings and late afternoons without full completion.",
+            "Daily planning slips apart mid-execution, leaving unfinished segments scattered across work hours on most weekdays without clear recovery.",
+            "Focus has become an exhausting burden, even though it is not completely absent in every single moment."
+          ],
+          "3": [
+            "All cognitive function is completely shattered; putting together a coherent sentence fails every time.",
+            "Routine cognitive sequences dissolve before reaching completion, forcing abandonment of tasks repeatedly across all days without exception or respite.",
+            "The sheer inability to focus makes independent living incredibly dangerous and impossible.",
+            "Every attempt to track a narrative or sequence disintegrates before reaching a midpoint, forcing abandonment of thoughts and activities with persistent frequency across all days.",
+            "Thoughts scatter uncontrollably upon contact with routine demands, making it impossible to maintain focus beyond mere seconds all week long.",
+            "Focus dissolves almost instantly whenever directed toward anything external, leaving no capacity to complete even basic mental tasks.",
+            "There is no real stretch of clean focus anymore; nearly every attempt at reading or listening breaks apart quickly.",
+            "External stimuli hijack attention immediately, pulling focus away from ongoing tasks before they advance past initial steps consistently across every single day.",
+            "Every attempt to engage with written material dissolves into noise before a single paragraph registers, persisting relentlessly across the entire seven-day period.",
+            "Daily life breaks apart into disconnected moments since the ability to hold onto a single line of thought remains gone all week."
+          ]
+        }
+      },
+      "psychomotor": {
+        "severity_levels": {
+          "0": [
+            "Movement and speech stay within an ordinary pace rather than feeling noticeably slowed down.",
+            "The body can sit still when needed without a recurring urge to pace or fidget.",
+            "There is no steady sense of moving through syrup or taking unusually long to do basic things.",
+            "Daily actions happen at a normal speed without the body seeming hard to get moving.",
+            "Familiar people would not likely comment on looking slowed or weighed down in movement.",
+            "Hands, feet, and posture stay relatively settled instead of repeatedly stirring without purpose.",
+            "There is no recent pattern of restless shifting, tapping, or unable-to-settle movement.",
+            "Walking, getting dressed, and handling small tasks look ordinary rather than slowed.",
+            "Transitions from sitting to doing are not being repeatedly held up by a slowed body tempo.",
+            "Conversation is not carried by rushed, jittery energy or visibly keyed-up movement."
+          ],
+          "1": [
+            "There are scattered moments of extra fidgeting, tapping, or shifting that are noticeable but limited.",
+            "Restlessness comes in patches rather than driving the whole day or setting.",
+            "Others might notice brief pacing or hand movement now and then, not as a constant feature.",
+            "Waiting can occasionally bring restless movement, though it remains manageable and brief.",
+            "Some days movement feels a bit heavier or slower than usual, though it does not dominate the week.",
+            "There are intermittent moments of feeling physically slowed, not a constant drag.",
+            "At times the body feels more keyed up, with a mild urge to keep moving.",
+            "Some days lately, movement feels a little heavier and less brisk than usual.",
+            "Quiet tasks may be accompanied by mild shifting or leg bouncing on off days.",
+            "Speech may come out a little slower on off days, then return to normal."
+          ],
+          "2": [
+            "Quiet waiting has become visibly difficult, so lines, calls, and short appointments keep turning into fidgeting and movement.",
+            "Movement has become slow enough on many days that other people may notice the reduced pace.",
+            "Across the week, others keep noticing the inability to stay still through a full show, meal, or meeting.",
+            "Restlessness has become visible enough that other people could comment on it.",
+            "Restlessness has become visible enough that other people could easily comment on how hard it is for the person to settle.",
+            "The day carries a physical inability to settle that goes beyond ordinary fidgeting and keeps intruding.",
+            "Getting up, answering, and starting simple tasks have all become noticeably delayed, with long pauses that coworkers and family keep noticing.",
+            "Ordinary control keeps losing to visible movement, and pacing or shifting breaks through across home, work, and social settings.",
+            "Others may notice repeated pacing, leg jiggling, hand wringing, or constant shifting.",
+            "Meetings, meals, or waiting periods are harder because the body keeps demanding movement."
+          ],
+          "3": [
+            "Movement has become unmistakably slow every day, with long delays to stand, answer, or begin even the simplest task.",
+            "Utterly uncontrollable fidgeting ruins every attempt at sleep; the limbs jerk violently.",
+            "There is no real break from the slowed tempo; from morning onward, speech, reactions, and movement stay markedly delayed.",
+            "Restlessness has become impossible to hide, with near-constant pacing, shifting, and inability to remain seated through ordinary situations.",
+            "The intense psychomotor agitation makes them look like they are physically vibrating out of control.",
+            "Hands tear at the hair violently and repeatedly; the extreme physical agitation is terrifying to watch.",
+            "The need to move acts as a screaming physical agony; they pace until their feet blister.",
+            "Frantic, nonstop pacing absolutely tears up the carpet; stopping is physically impossible.",
+            "The day is marked by continuous fidgeting and pacing, with no meaningful stretch of calm stillness anywhere.",
+            "They virtually vibrate with an internal, crawl-out-of-their-skin restlessness that completely prevents relaxing."
+          ]
+        }
+      }
+    }
+  },
+  "accepted_cue_bank": {
+    "version": "1.0",
+    "updated_at": "2026-03-19T05:21:40.827449+00:00",
+    "source_runs": [
+      {
+        "run_id": "derived_top25_from_seed42_plus_a100_h100_votesum_ge95",
+        "status": "completed",
+        "synced_at": "2026-03-18T18:17:39.833998+00:00",
+        "accepted_counts_by_cell": {
+          "anhedonia:0": 25,
+          "anhedonia:1": 25,
+          "anhedonia:2": 25,
+          "anhedonia:3": 25,
+          "appetite:0": 25,
+          "appetite:1": 25,
+          "appetite:2": 25,
+          "appetite:3": 25,
+          "concentration:0": 25,
+          "concentration:1": 25,
+          "concentration:2": 25,
+          "concentration:3": 25,
+          "depressed_mood:0": 25,
+          "depressed_mood:1": 25,
+          "depressed_mood:2": 25,
+          "depressed_mood:3": 25,
+          "fatigue:0": 25,
+          "fatigue:1": 25,
+          "fatigue:2": 25,
+          "fatigue:3": 25,
+          "psychomotor:0": 25,
+          "psychomotor:1": 25,
+          "psychomotor:2": 25,
+          "psychomotor:3": 25,
+          "self_worth:0": 25,
+          "self_worth:1": 25,
+          "self_worth:2": 25,
+          "self_worth:3": 25,
+          "sleep:0": 25,
+          "sleep:1": 25,
+          "sleep:2": 25,
+          "sleep:3": 25
+        },
+        "new_cues_added_by_cell": {
+          "anhedonia:0": 25,
+          "anhedonia:1": 25,
+          "anhedonia:2": 25,
+          "anhedonia:3": 25,
+          "appetite:0": 25,
+          "appetite:1": 25,
+          "appetite:2": 25,
+          "appetite:3": 25,
+          "concentration:0": 25,
+          "concentration:1": 25,
+          "concentration:2": 25,
+          "concentration:3": 25,
+          "depressed_mood:0": 25,
+          "depressed_mood:1": 25,
+          "depressed_mood:2": 25,
+          "depressed_mood:3": 25,
+          "fatigue:0": 25,
+          "fatigue:1": 25,
+          "fatigue:2": 25,
+          "fatigue:3": 25,
+          "psychomotor:0": 25,
+          "psychomotor:1": 25,
+          "psychomotor:2": 25,
+          "psychomotor:3": 25,
+          "self_worth:0": 25,
+          "self_worth:1": 25,
+          "self_worth:2": 25,
+          "self_worth:3": 25,
+          "sleep:0": 25,
+          "sleep:1": 25,
+          "sleep:2": 25,
+          "sleep:3": 25
+        },
+        "total_accepted_cues": 800,
+        "total_new_cues_added": 800
+      }
+    ]
+  }
+}

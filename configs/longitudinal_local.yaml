@@ -1,0 +1,65 @@
+run:
+  seed: 42
+  output_root: out/longitudinal_qwen_3.5_35b_a3b
+  cache_root: cache/conversations_qwen_3.5_35b_a3b
+
+simulation:
+  num_sessions: 6
+  # Internal turn unit is one counselor+client exchange.
+  # With target_turns = 20, each session produces 40 utterances:
+  # Counselor 20 turns and Client 20 turns.
+  target_turns: 20
+  retrieval_top_k: 4
+  retrieval_threshold: 0.12
+  retrieval_method: rrf
+  counselor_temperature: 0.6
+  counselor_max_tokens: 512
+  client_temperature: 0.6
+  client_max_tokens: 512
+
+paths:
+  # Set either a raw source profile or both prepared paths below.
+  source_profile_path: ""
+  client_profile_path: ""
+  counselor_profile_path: profiles/seeds/counselor/default.json
+  hidden_state_path: ""
+  trend_path: ""
+
+models:
+  source: api
+  api_key: ""
+  base_url: http://localhost:8100/v1
+  model_name: Qwen/Qwen3.5-35B-A3B
+  timeout_seconds: 1200
+  max_retries: 3
+  thinking:
+    enabled: true
+    budget_tokens: 4096
+    strip_tags: true
+    request_extras:
+      chat_template_kwargs:
+        enable_thinking: true
+      temperature: 0.6
+      top_p: 0.95
+      top_k: 20
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.90
+    kv_cache_memory_bytes: null
+    max_model_len: 8192
+    max_num_batched_tokens: 2048
+    max_num_seqs: 256
+    enable_chunked_prefill: true
+    enable_prefix_caching: true
+    enforce_eager: true
+    dtype: bfloat16
+    gdn_prefill_backend: triton
+    seed: 0
+    trust_remote_code: false
+
+runtime:
+  gpus: "0"
+
+features:
+  complaint_shift:
+    enabled: false

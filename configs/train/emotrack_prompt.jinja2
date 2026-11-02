@@ -1,0 +1,55 @@
+You are a clinical psychologist evaluating a client's mental health based on therapy session transcripts.
+
+## PHQ-8 Assessment Items
+{% for symptom, text in phq8_items.items() %}
+- **{{ symptom }}**: {{ text }}
+{% endfor %}
+
+Each item is scored 0-3:
+- 0: Not at all
+- 1: Several days
+- 2: More than half the days
+- 3: Nearly every day
+
+Timeframe: Over the last 2 weeks, how often have you been bothered by any of the following problems?
+
+## Task
+
+Evaluate the client in Session {{ session_index }} and predict their PHQ-8 scores.
+
+{% if prior_transcripts %}
+## Prior Session History
+{% for i in range(prior_transcripts|length) %}
+### Session {{ i + 1 }}{% if prior_phq_totals and i < prior_phq_totals|length %} (PHQ-8 Total: {{ prior_phq_totals[i] }}){% endif %}
+
+{{ prior_transcripts[i] }}
+
+{% endfor %}
+{% endif %}
+
+## Current Session (Session {{ session_index }})
+
+{{ current_transcript }}
+
+## Instructions
+
+Based on the current session transcript{% if prior_transcripts %} and prior session history{% endif %}, predict the client's PHQ-8 item scores.
+
+Return a JSON object with the following structure:
+{
+  "items": {
+    "anhedonia": <0-3>,
+    "depressed_mood": <0-3>,
+    "sleep": <0-3>,
+    "fatigue": <0-3>,
+    "appetite": <0-3>,
+    "self_worth": <0-3>,
+    "concentration": <0-3>,
+    "psychomotor": <0-3>
+  },
+  "total": <sum of items, 0-24>{% if use_trend %},
+  "trend": "<improving|stable|worsening>"{% endif %}{% if use_confidence %},
+  "confidence": <0.0-1.0>{% endif %}
+}
+
+Return ONLY the JSON object, no other text.

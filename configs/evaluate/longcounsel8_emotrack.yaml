@@ -1,0 +1,18 @@
+dataset:
+  name: conversation
+  input_root: result/longcounsel-8-qwen-3.5-35b-a3b
+  transcript_view: full
+
+method:
+  name: emotrack
+  mode: aida
+  checkpoint: out/emotrack/seed0/best
+  include_history: true
+
+llm:
+  backend: local
+  base_url: ""
+  model_name: ""
+
+output:
+  experiment_tag: longcounsel8_emotrack

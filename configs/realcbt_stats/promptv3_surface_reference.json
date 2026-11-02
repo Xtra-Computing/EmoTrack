@@ -1,0 +1,723 @@
+{
+  "counselor|t01|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 1,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      8
+    ],
+    "starter": "well",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t01|prevq0": {
+    "speaker": "client",
+    "turn_id": 1,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t02|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 2,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "question",
+    "sentence_word_counts": [
+      2,
+      5
+    ],
+    "starter": "",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t02|prevq1": {
+    "speaker": "client",
+    "turn_id": 2,
+    "prev_question": true,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      15,
+      20
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t03|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 3,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      13,
+      2,
+      17
+    ],
+    "starter": "yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t03|prevq0": {
+    "speaker": "client",
+    "turn_id": 3,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      17,
+      5
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t04|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 4,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "question",
+    "sentence_word_counts": [
+      14,
+      8
+    ],
+    "starter": "so you",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t04|prevq0": {
+    "speaker": "client",
+    "turn_id": 4,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      8,
+      1,
+      4
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t05|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 5,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      7
+    ],
+    "starter": "yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t05|prevq0": {
+    "speaker": "client",
+    "turn_id": 5,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      2
+    ],
+    "starter": "yeah yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t06|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 6,
+    "prev_question": false,
+    "stage_label": "mid_early",
+    "form_label": "question",
+    "sentence_word_counts": [
+      3
+    ],
+    "starter": "",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t06|prevq1": {
+    "speaker": "client",
+    "turn_id": 6,
+    "prev_question": true,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      12,
+      6,
+      5,
+      30,
+      14
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t07|prevq1": {
+    "speaker": "counselor",
+    "turn_id": 7,
+    "prev_question": true,
+    "stage_label": "mid_early",
+    "form_label": "question",
+    "sentence_word_counts": [
+      3,
+      2
+    ],
+    "starter": "yeah",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t07|prevq1": {
+    "speaker": "client",
+    "turn_id": 7,
+    "prev_question": true,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      19,
+      19
+    ],
+    "starter": "well i",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t08|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 8,
+    "prev_question": false,
+    "stage_label": "mid_early",
+    "form_label": "question",
+    "sentence_word_counts": [
+      5
+    ],
+    "starter": "so",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t08|prevq1": {
+    "speaker": "client",
+    "turn_id": 8,
+    "prev_question": true,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      23,
+      29,
+      1,
+      6,
+      23
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t09|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 9,
+    "prev_question": false,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1
+    ],
+    "starter": "so",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t09|prevq0": {
+    "speaker": "client",
+    "turn_id": 9,
+    "prev_question": false,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      8,
+      7
+    ],
+    "starter": "yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t10|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 10,
+    "prev_question": false,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      15
+    ],
+    "starter": "okay so",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t10|prevq0": {
+    "speaker": "client",
+    "turn_id": 10,
+    "prev_question": false,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      3
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t11|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 11,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "starter": "okay",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t11|prevq0": {
+    "speaker": "client",
+    "turn_id": 11,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      2
+    ],
+    "starter": "yeah yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t12|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 12,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "question",
+    "sentence_word_counts": [
+      11
+    ],
+    "starter": "",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t12|prevq0": {
+    "speaker": "client",
+    "turn_id": 12,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      4,
+      1
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t13|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 13,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      13,
+      2,
+      7
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t13|prevq0": {
+    "speaker": "client",
+    "turn_id": 13,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      3,
+      7
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t14|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 14,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "question",
+    "sentence_word_counts": [
+      7
+    ],
+    "starter": "",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t14|prevq1": {
+    "speaker": "client",
+    "turn_id": 14,
+    "prev_question": true,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      4,
+      3,
+      28,
+      10,
+      16,
+      30,
+      4,
+      1,
+      36,
+      11
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t15|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 15,
+    "prev_question": false,
+    "stage_label": "mid_late",
+    "form_label": "question",
+    "sentence_word_counts": [
+      9
+    ],
+    "starter": "so",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t15|prevq1": {
+    "speaker": "client",
+    "turn_id": 15,
+    "prev_question": true,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      6
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t16|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 16,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      6,
+      1,
+      9,
+      26
+    ],
+    "starter": "yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t16|prevq0": {
+    "speaker": "client",
+    "turn_id": 16,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      10,
+      5
+    ],
+    "starter": "okay",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t17|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 17,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      12,
+      11,
+      5
+    ],
+    "starter": "all right",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t17|prevq0": {
+    "speaker": "client",
+    "turn_id": 17,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      2,
+      2,
+      11,
+      20,
+      17
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t18|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 18,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "question",
+    "sentence_word_counts": [
+      1,
+      4,
+      10
+    ],
+    "starter": "right",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t18|prevq1": {
+    "speaker": "client",
+    "turn_id": 18,
+    "prev_question": true,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1,
+      19
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t19|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 19,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      7
+    ],
+    "starter": "so",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t19|prevq0": {
+    "speaker": "client",
+    "turn_id": 19,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1
+    ],
+    "starter": "okay",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t20|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 20,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      4,
+      1,
+      8,
+      22,
+      8,
+      37,
+      11,
+      27
+    ],
+    "starter": "so",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t20|prevq0": {
+    "speaker": "client",
+    "turn_id": 20,
+    "prev_question": false,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      1
+    ],
+    "starter": "yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t04|prevq1": {
+    "speaker": "client",
+    "turn_id": 4,
+    "prev_question": true,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      11
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "counselor|t07|prevq0": {
+    "speaker": "counselor",
+    "turn_id": 7,
+    "prev_question": false,
+    "stage_label": "mid_early",
+    "form_label": "question",
+    "sentence_word_counts": [
+      5,
+      9
+    ],
+    "starter": "well",
+    "end_with_question": true,
+    "max_question_count": 1
+  },
+  "client|t12|prevq1": {
+    "speaker": "client",
+    "turn_id": 12,
+    "prev_question": true,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      6,
+      6,
+      4,
+      3,
+      30,
+      1,
+      11,
+      2
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t02|prevq0": {
+    "speaker": "client",
+    "turn_id": 2,
+    "prev_question": false,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      7,
+      10,
+      1,
+      5,
+      11,
+      2,
+      18,
+      10,
+      13,
+      6
+    ],
+    "starter": "i mean",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t05|prevq1": {
+    "speaker": "client",
+    "turn_id": 5,
+    "prev_question": true,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      21,
+      12,
+      6
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t17|prevq1": {
+    "speaker": "client",
+    "turn_id": 17,
+    "prev_question": true,
+    "stage_label": "late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      3
+    ],
+    "starter": "yeah",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t09|prevq1": {
+    "speaker": "client",
+    "turn_id": 9,
+    "prev_question": true,
+    "stage_label": "mid_early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      2
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t13|prevq1": {
+    "speaker": "client",
+    "turn_id": 13,
+    "prev_question": true,
+    "stage_label": "mid_late",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      4,
+      2,
+      4
+    ],
+    "starter": "",
+    "end_with_question": false,
+    "max_question_count": 0
+  },
+  "client|t03|prevq1": {
+    "speaker": "client",
+    "turn_id": 3,
+    "prev_question": true,
+    "stage_label": "early",
+    "form_label": "statement",
+    "sentence_word_counts": [
+      49,
+      51,
+      6
+    ],
+    "starter": "well i",
+    "end_with_question": false,
+    "max_question_count": 0
+  }
+}

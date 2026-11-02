@@ -1,0 +1,281 @@
+{
+  "prompt_template": "Analyze a therapist-subject conversation transcript and related psychological questionnaire questions. Focus on understanding the subject's mental health by examining their dialogue for both explicit and implicit cues. Pay attention to signs of depression, PTSD, and other conditions, but also note the absence of these symptoms.\n\nYour task is to provide answers to the questionnaire as if you were the subject, based on insights from the conversation. Ensure your responses are balanced, reflecting the subject's mental state as suggested by the transcript. Make informed deductions about the subject's emotional state, stress management, life satisfaction, social interactions, and professional aspirations, providing answers that reflect mental health issues or a neutral state as indicated by the transcript.\n\nTranscript: {raw_psyc_transcript}\nAgreement range: {agreement_range}\nQuestion: {question}",
+  "agreement_range": "1-5, where 1 means 'don't agree at all' and 5 means 'very much agree'",
+  "domains": [
+    {
+      "domain_name": "Mental Health",
+      "topics": [
+        {
+          "topic_name": "Agoraphobia",
+          "questions": [
+            "Do you fear being in open or enclosed spaces?",
+            "Do you avoid public transportation or being in crowds?",
+            "Does the thought of leaving your home alone cause you anxiety?",
+            "How do these fears limit your daily activities or lifestyle?",
+            "Do you require a companion when going out due to these fears?"
+          ]
+        },
+        {
+          "topic_name": "Attention-Deficit/Hyperactivity Disorder",
+          "questions": [
+            "Do you find it difficult to organize tasks and activities?",
+            "Do you often forget appointments or daily activities?",
+            "Do you often make careless mistakes in work or other activities?",
+            "Do you get easily sidetracked by extraneous stimuli?",
+            "How much do these symptoms impact your performance in work or school?"
+          ]
+        },
+        {
+          "topic_name": "Body Image",
+          "questions": [
+            "How would you describe your level of satisfaction with your appearance?",
+            "Do you often compare your body to others?",
+            "How much does your perception of your body affect your daily life?",
+            "Do you have any concerns about your eating habits or weight management?",
+            "How confident do you feel in your abilities and decisions?"
+          ]
+        },
+        {
+          "topic_name": "Borderline Personality Disorder",
+          "questions": [
+            "Do you experience intense and unstable relationships with others?",
+            "Do you often feel empty or bored?",
+            "Do you experience mood swings that can last for a few hours to a few days?",
+            "Do you have a fear of abandonment, either real or imagined?",
+            "Do you engage in impulsive behaviors, like substance abuse or reckless driving?"
+          ]
+        },
+        {
+          "topic_name": "Delusions",
+          "questions": [
+            "Do you feel disconnected from reality at times?",
+            "Do you have strong beliefs that others find unusual or unrealistic?",
+            "Do you feel controlled or influenced by external forces or beings?",
+            "Have you experienced changes in your perception or senses that others do not?",
+            "Do these experiences cause you distress or impair your functioning?"
+          ]
+        },
+        {
+          "topic_name": "Generalized Anxiety Disorder",
+          "questions": [
+            "Do you find it hard to control your worrying?",
+            "Does your anxiety interfere with your work, school, or family responsibilities?",
+            "Do you experience physical symptoms of anxiety, like muscle tension or restlessness?",
+            "Do you often feel irritable or on edge?",
+            "Do you have trouble sleeping due to worry?"
+          ]
+        },
+        {
+          "topic_name": "Hypomania/Mania",
+          "questions": [
+            "Have you found yourself more talkative or speaking faster than usual?",
+            "Do you often feel overly confident in your abilities or ideas?",
+            "Have you engaged in risky behaviors, like excessive spending or reckless driving?",
+            "Do you find your thoughts racing or jumping from topic to topic?",
+            "Have others noticed a significant change in your mood or behavior?"
+          ]
+        },
+        {
+          "topic_name": "Major Depressive Disorder",
+          "questions": [
+            "Do you often feel hopeless or helpless?",
+            "Have you noticed a change in your appetite or weight without trying to lose or gain weight?",
+            "Do you struggle to concentrate on tasks or make decisions?",
+            "Do you often feel worthless or excessively guilty about things?",
+            "Have your sleep patterns changed, such as sleeping too much or too little?"
+          ]
+        },
+        {
+          "topic_name": "Obsessive-Compulsive Disorder",
+          "questions": [
+            "Do you check things repeatedly or have rituals that you feel compelled to perform?",
+            "Do your thoughts or rituals cause you distress or interfere with your daily life?",
+            "Do you spend more than an hour a day on these thoughts or rituals?",
+            "Do you avoid certain situations or activities because of your fears or compulsions?",
+            "Do you need to have things arranged in a specific order or manner?"
+          ]
+        },
+        {
+          "topic_name": "Panic Attacks",
+          "questions": [
+            "During panic attacks, do you feel like you're losing control or going crazy?",
+            "Do you fear these attacks to the point of altering your daily routines?",
+            "Have you visited the emergency room or sought medical help for these symptoms?",
+            "Do you avoid places or situations for fear of triggering an attack?",
+            "How do these attacks impact your daily life?"
+          ]
+        },
+        {
+          "topic_name": "Persistent Depressive Disorder",
+          "questions": [
+            "Have you experienced low mood more days than not for at least two years?",
+            "Do you feel like you've been in a mild but constant state of depression?",
+            "Do you find little pleasure in activities you once enjoyed?",
+            "Do you struggle with feelings of inadequacy or low self-esteem?",
+            "Have you experienced changes in your appetite or sleep patterns?"
+          ]
+        },
+        {
+          "topic_name": "Post-Traumatic Stress Disorder",
+          "questions": [
+            "Do you experience heightened vigilance or jumpiness?",
+            "Are you engaging in self-destructive or risky behavior since the event?",
+            "Do you feel numb or detached from people, activities, or surroundings?",
+            "Do you find yourself being easily angered or having aggressive outbursts?",
+            "Have you noticed any changes in your beliefs or feelings about yourself and others?"
+          ]
+        },
+        {
+          "topic_name": "Social Phobia",
+          "questions": [
+            "Do you fear being criticized or embarrassed in social situations?",
+            "Does speaking to unfamiliar people cause you significant anxiety?",
+            "Do you avoid social situations due to fear of being judged?",
+            "Do physical symptoms like sweating or trembling accompany your fear in social settings?",
+            "How does this fear impact your personal or professional life?"
+          ]
+        },
+        {
+          "topic_name": "Substance Abuse",
+          "questions": [
+            "Do you use any substances like drugs or alcohol regularly?",
+            "How often do you find yourself using these substances?",
+            "Have you noticed any negative impacts on your health, work, or relationships due to substance use?",
+            "Do you feel a strong desire or compulsion to use these substances?",
+            "Have you tried to cut down or stop using these substances in the past?"
+          ]
+        }
+      ]
+    },
+    {
+      "domain_name": "Personality",
+      "topics": [
+        {
+          "topic_name": "Agreeableness",
+          "questions": [
+            "Do you often find yourself making compromises to maintain harmony in your relationships?",
+            "Would you describe yourself as someone who is generally trusting of others?",
+            "How often do you get into arguments with people?",
+            "Do you tend to empathize easily with others?",
+            "How likely are you to volunteer your time to help others?"
+          ]
+        },
+        {
+          "topic_name": "Conscientiousness",
+          "questions": [
+            "How often do you set and achieve long-term goals?",
+            "Do you prefer having a set schedule or being spontaneous?",
+            "How would you rate your ability to resist temptations or distractions?",
+            "Do you take pride in the accuracy and detail of your work?",
+            "How do you handle important deadlines?"
+          ]
+        },
+        {
+          "topic_name": "Extraversion",
+          "questions": [
+            "Do you enjoy being the center of attention in social gatherings?",
+            "How often do you initiate conversations with people you don't know?",
+            "Do you prefer group activities or solitary activities?",
+            "Do you feel energized when interacting with a large group of people?",
+            "How would you describe your level of assertiveness in social situations?"
+          ]
+        },
+        {
+          "topic_name": "Neuroticism",
+          "questions": [
+            "Do you often feel anxious or worried about various aspects of your life?",
+            "How do you react to stressful situations?",
+            "Do you frequently feel mood swings or emotional instability?",
+            "Do you often have trouble sleeping due to worrying?",
+            "How often do you experience feelings of sadness or depression?"
+          ]
+        },
+        {
+          "topic_name": "Openness",
+          "questions": [
+            "Do you enjoy trying new activities and visiting new places?",
+            "How often do you engage in creative activities like writing, painting, or playing music?",
+            "Do you enjoy discussing abstract concepts and ideas?",
+            "How do you feel about change and variety in your life?",
+            "Would you say you are open to new and diverse perspectives or opinions?"
+          ]
+        }
+      ]
+    },
+    {
+      "domain_name": "Therapeutic",
+      "topics": [
+        {
+          "topic_name": "Family History",
+          "questions": [
+            "Do you feel you have a strong and positive relationship with your family members?",
+            "Do you manage conflicts or disagreements within your family effectively?",
+            "Is there a history of mental health issues or substance use in your family?",
+            "Do you believe your family background has significantly influenced your current life choices and behaviors?",
+            "Do you feel supported and understood by your family?"
+          ]
+        },
+        {
+          "topic_name": "Trauma History",
+          "questions": [
+            "Have you ever experienced a traumatic event such as physical, emotional, or sexual abuse?",
+            "How do you feel this event has affected your life?",
+            "Do you often think about or have flashbacks to this traumatic event?",
+            "How do you typically cope with reminders of the trauma?",
+            "Have you sought any professional help to deal with the aftermath of this traumatic experience?"
+          ]
+        },
+        {
+          "topic_name": "Resilience",
+          "questions": [
+            "How quickly do you recover from setbacks or disappointments?",
+            "Do you often find positive aspects in negative situations?",
+            "How do you usually cope with stress and pressure?",
+            "Do you feel confident in your ability to handle new challenges?",
+            "How often do you bounce back from hardships stronger than before?"
+          ]
+        }
+      ]
+    },
+    {
+      "domain_name": "Direct",
+      "topics": [
+        {
+          "topic_name": "PHQ-8",
+          "questions": [
+            "How much are you experiencing little interest or pleasure in doing things?",
+            "How much are you feeling down, depressed, or hopeless?",
+            "How much are you having trouble with falling or staying asleep, or sleeping too much?",
+            "How much are you feeling tired or having little energy?",
+            "How much are you experiencing poor appetite or overeating?",
+            "How much are you feeling bad about yourself, or that you are a failure or have let yourself or your family down?",
+            "How much are you having trouble concentrating on things, like reading the newspaper or watching television?",
+            "How much are you moving or speaking so slowly that other people might have noticed, or the opposite - being so fidgety or restless that you've been moving around a lot more than usual?"
+          ]
+        },
+        {
+          "topic_name": "PCL-C",
+          "questions": [
+            "How much are you re-experiencing disturbing memories, thoughts, or images of a stressful experience from the past?",
+            "How much are you experiencing repeated, disturbing dreams of a stressful experience from the past?",
+            "How much are you suddenly acting or feeling as if a stressful experience were happening again (as if you were reliving it)?",
+            "How much are you feeling upset when something reminded you of a stressful experience from the past?",
+            "How much are you having physical reactions (e.g., heart pounding, trouble breathing, sweating) when something reminded you of a stressful experience?",
+            "How much are you avoiding thinking about or talking about a stressful experience from the past or avoiding having feelings related to it?",
+            "How much are you avoiding activities or situations because they remind you of a stressful experience?",
+            "How much are you having trouble remembering important parts of a stressful experience?",
+            "How much are you losing interest in activities that you used to enjoy?",
+            "How much are you feeling detached or estranged from others?",
+            "How much are you feeling emotionally numb or being unable to have loving feelings for those close to you?",
+            "How much are you feeling as if your future will somehow be cut short?",
+            "How much are you having trouble falling or staying asleep?",
+            "How much are you feeling irritable or having angry outbursts?",
+            "How much are you having difficulty concentrating?",
+            "How much are you being 'super alert' or watchful or on guard?",
+            "How much are you feeling jumpy or easily startled?"
+          ]
+        }
+      ]
+    }
+  ]
+}

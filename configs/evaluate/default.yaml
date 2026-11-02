@@ -1,0 +1,113 @@
+dataset:
+  name: conversation
+  input_root: result/longcounsel-8
+  transcript_view: full
+  split_file: ""
+
+llm:
+  backend: local
+  base_url: http://localhost:8100/v1
+  model_name: Qwen/Qwen3.5-35B-A3B
+  api_key: EMPTY
+  api_key_env: ""
+  worker_visible_gpus:
+    - "0"
+  startup_timeout_seconds: 600
+  log_root: out/eval/services
+  vllm:
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.90
+    max_model_len: 8192
+    max_num_batched_tokens: 2048
+    max_num_seqs: 256
+    dtype: bfloat16
+    gdn_prefill_backend: triton
+    seed: 0
+    trust_remote_code: false
+    enforce_eager: true
+    enable_chunked_prefill: true
+    enable_prefix_caching: true
+
+output:
+  experiment_tag: ""
+
+default_methods:
+  - psycheval
+  - aida
+  - lmiq
+  - ensembert
+  - dual_encoder
+  - milintsevich
+
+method_configs:
+  psycheval:
+    sample_count: 5
+    eval_concurrency: 1
+  aida:
+    feature_concurrency: 4
+  lmiq:
+    question_bank_path: configs/evaluate/lmiq_question_bank.json
+    feature_concurrency: 4
+    rf_n_estimators_grid: [100, 200, 300]
+    rf_max_depth_grid: [10, 20, 30]
+    inner_val_fraction: 0.125
+  ensembert:
+    inference_seed: 2
+    retrieval_model_name: OpenMatch/cocodr-base-msmarco
+    retrieval_batch_size: 32
+    retrieval_max_length: 256
+    retrieval_pooling_strategy: mean
+    retrieval_torch_dtype: auto
+    retrieval_trust_remote_code: false
+    embedding_model_name: sentence-transformers/all-mpnet-base-v2
+    embedding_batch_size: 32
+    embedding_max_length: 256
+    embedding_pooling_strategy: mean
+    embedding_torch_dtype: auto
+    embedding_trust_remote_code: false
+    ensembert_max_posts: 30
+    ensembert_min_words: 2
+    ensembert_document_source: client_utterances
+    ensembert_dense_units: 256
+    ensembert_num_heads: 2
+    ensembert_learning_rate: 0.001
+    ensembert_weight_decay: 0.0001
+    ensembert_num_epochs: 50
+    ensembert_batch_size: 64
+    ensembert_patience: 8
+    ensembert_out_loss_weight: 1.0
+    ensembert_soft_loss_weight: 1.0
+    ensembert_meta_loss_weight: 1.0
+    ensembert_prediction_head: meta
+    ensembert_item_description_path: configs/evaluate/ensembert/phq8_item_descriptions.json
+    ensembert_method_prefix: ensembert
+    inner_val_fraction: 0.125
+  dual_encoder:
+    inference_seed: 2
+    dual_encoder_repo_root: cache/external/dual-encoder-model
+    dual_encoder_batch_size: 2
+    dual_encoder_num_epochs: 200
+    dual_encoder_patience: 20
+    dual_encoder_learning_rate: 3.0e-4
+    dual_encoder_weight_decay: 0.01
+    dual_encoder_transformer_pretrained_id: sentence-transformers/all-mpnet-base-v2
+    dual_encoder_warm_start: true
+    dual_encoder_method_prefix: dual_encoder
+    inner_val_fraction: 0.125
+  milintsevich:
+    inference_seed: 2
+    milintsevich_repo_root: cache/external/hierarchical-depression-symptom-classifier
+    milintsevich_python_executable: ""
+    milintsevich_num_iters: 100
+    milintsevich_batch_size: 48
+    milintsevich_early_stopping_patience: 10
+    milintsevich_method_prefix: milintsevich
+    inner_val_fraction: 0.125
+  emotrack:
+    mode: api
+    eval_concurrency: 1
+    include_history: true
+    use_trend: false
+    use_confidence: false
+    prompt_template: ""
+    checkpoint: ""

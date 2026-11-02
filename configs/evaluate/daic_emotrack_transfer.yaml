@@ -1,0 +1,19 @@
+dataset:
+  name: daic_woz
+  input_root: result/daic_woz
+  transcript_view: full
+  split_file: result/daic_woz/train_val_test_split.json
+
+method:
+  name: emotrack
+  mode: aida
+  checkpoint: out/emotrack/seed0/best
+  include_history: false
+
+llm:
+  backend: local
+  base_url: ""
+  model_name: ""
+
+output:
+  experiment_tag: daic_emotrack_transfer

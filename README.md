@@ -33,7 +33,7 @@ An 80 GB GPU accommodates the default local setup. Model weights and CUDA
 packages require additional disk space beyond this repository.
 
 ```bash
-git clone https://github.com/hiddensev/EmoTrack.git
+git clone https://github.com/Xtra-Computing/EmoTrack.git
 cd EmoTrack
 uv sync --locked
 ```
